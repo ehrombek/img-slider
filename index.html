@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Img slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- slider start -->
+
+     <div class="slider">
+        <div class="slides">
+            <!-- btn radio -->
+            <input type="radio" name="radiobtn" id="radio1">
+            <input type="radio" name="radiobtn" id="radio2">
+            <input type="radio" name="radiobtn" id="radio3">
+            <input type="radio" name="radiobtn" id="radio4">
+            <!-- img slide -->
+            <div class="slide first">
+                <img src="imgs/img1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="imgs/img2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="imgs/img3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="imgs/img4.jpg" alt="">
+            </div>
+            <!-- auto navigation -->
+            <div class="navigation-auto">
+                <div class="autobtn1"></div>
+                <div class="autobtn2"></div>
+                <div class="autobtn3"></div>
+                <div class="autobtn4"></div>
+            </div>
+            <!-- manual  n  -->
+            <div class="manual-nav">
+                <div class="manual-1">
+                </div>
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+
+            </div
+
+        </div>
+     </div>   
+
+    <!-- slider end -->
+    
+    <script>
+        var counter =  1 ;
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if(counter > 4){
+                counter = 1;
+            }
+
+        }, 4000);
+    </script>
+</body>
+</html>
